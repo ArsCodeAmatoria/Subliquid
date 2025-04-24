@@ -19,28 +19,91 @@ A modern PSP22 token implementation with a sleek web interface built on Next.js 
 - Frontend: Next.js, Tailwind CSS, shadcn/ui
 - Blockchain: Substrate/Polkadot
 
-## Development
-1. Install dependencies:
-```bash
-# For contracts
-cd contracts/subliquid-token
-cargo build
+## Features
+- PSP22 compliant token with minting capability
+- Connect with Polkadot.js or Talisman wallet
+- View token balances
+- Mint new tokens (requires appropriate permissions)
+- Modern crypto-lux UI design with amber and emerald accents
 
-# For frontend
-cd apps/web
-npm install
+## Setup and Development
+
+### Smart Contract Development
+
+1. Setup Rust and Cargo:
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-src
+rustup target add wasm32-unknown-unknown
 ```
 
-2. Run development server:
+2. Install cargo-contract:
+```bash
+cargo install cargo-contract --force
+```
+
+3. Build the contract:
+```bash
+cd contracts/subliquid-token
+cargo contract build
+```
+
+4. Deploy the contract:
+   - Using [Windsurf](https://windsurf.polka.network/) for testnet deployment
+   - Or a local node: `substrate-contracts-node --dev`
+
+### Frontend Development
+
+1. Install dependencies:
+```bash
+cd apps/web
+npm install
+# or
+yarn install
+# or 
+pnpm install
+```
+
+2. Configure environment:
+   Create a `.env.local` file in the `apps/web` directory:
+   ```
+   NEXT_PUBLIC_CONTRACT_ADDRESS=your_deployed_contract_address
+   NEXT_PUBLIC_WS_ENDPOINT=wss://your-node-endpoint
+   ```
+
+3. Run development server:
 ```bash
 cd apps/web
 npm run dev
 ```
 
-3. Connect wallet:
-- Install Polkadot.js or Talisman extension
-- Connect to local node or supported network
-- Interact with the dApp
+4. Access the application at:
+```
+http://localhost:3000
+```
+
+## Wallet Setup
+1. Install a compatible wallet:
+   - [Polkadot.js Extension](https://polkadot.js.org/extension/)
+   - [Talisman Wallet](https://talisman.xyz/)
+
+2. Create or import an account
+
+3. Ensure the wallet is connected to the correct network:
+   - For local development: `127.0.0.1:9944`
+   - For testnet: Check your testnet's connection details
+
+## Deployment
+
+### Smart Contract
+1. Deploy to testnet using [Windsurf](https://windsurf.polka.network/) 
+2. Deploy to mainnet using the same process but connecting to mainnet endpoints
+
+### Frontend
+Deploy the frontend to Vercel:
+```bash
+npx vercel
+```
 
 ## License
 MIT
