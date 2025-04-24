@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { WalletProvider } from "@/lib/wallet-context";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background text-text min-h-screen`}>
+      <body className={`${inter.className} bg-background text-text min-h-screen flex flex-col`}>
         <WalletProvider>
           <nav className="bg-zinc-900 border-b border-zinc-800 py-4">
             <div className="container mx-auto px-4 flex justify-between items-center">
@@ -25,7 +26,10 @@ export default function RootLayout({
               <a href="/dashboard" className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors">Dashboard</a>
             </div>
           </nav>
-          {children}
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </WalletProvider>
       </body>
     </html>

@@ -1,14 +1,22 @@
 import { TokenBalance } from "@/components/TokenBalance";
 import { MintForm } from "@/components/MintForm";
+import { TransferForm } from "@/components/TransferForm";
+import { TransactionHistory } from "@/components/TransactionHistory";
 
 export default function Dashboard() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">Dashboard</h1>
-      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div className="grid gap-8 max-w-6xl mx-auto">
+      {/* Top row: Balance and Actions */}
+      <div className="grid md:grid-cols-2 gap-8">
         <TokenBalance />
-        <MintForm />
+        <div className="grid gap-8">
+          <MintForm />
+          <TransferForm />
+        </div>
       </div>
+      
+      {/* Bottom row: Transaction History */}
+      <TransactionHistory />
     </div>
   );
 }
