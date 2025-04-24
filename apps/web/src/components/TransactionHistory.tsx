@@ -30,7 +30,7 @@ export function TransactionHistory() {
           {
             id: '0x1234...5678',
             type: 'mint',
-            from: 'Subliquid Contract',
+            from: 'Subliquid Scam Contract',
             to: selectedAccount.address,
             amount: '1000',
             timestamp: Date.now() - 3600000 // 1 hour ago
@@ -61,25 +61,25 @@ export function TransactionHistory() {
   // Helper to truncate address
   const truncateAddress = (address: string) => {
     if (!address) return '';
-    if (address === 'Subliquid Contract') return address;
+    if (address === 'Subliquid Scam Contract') return address;
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
 
   return (
     <div className="p-6 rounded-lg border border-zinc-800 bg-zinc-900/50">
-      <h2 className="text-2xl font-semibold mb-4">Recent Transactions</h2>
+      <h2 className="text-2xl font-semibold mb-4">Evidence of Your Poor Decisions</h2>
       
       {!isConnected ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">Connect your wallet to view your transaction history</p>
+          <p className="text-zinc-400">Connect your wallet, moron. We can't mock you without data.</p>
         </div>
       ) : loading ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">Loading transactions...</p>
+          <p className="text-zinc-400">Digging up your failures...</p>
         </div>
       ) : transactions.length === 0 ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">No transactions found</p>
+          <p className="text-zinc-400">No transactions found. Even our scam doesn't want you.</p>
         </div>
       ) : (
         <div className="space-y-4 max-h-96 overflow-y-auto">
@@ -94,7 +94,7 @@ export function TransactionHistory() {
                     tx.type === 'mint' ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'
                   }`}
                 >
-                  {tx.type === 'mint' ? 'Mint' : 'Transfer'}
+                  {tx.type === 'mint' ? 'You Got Scammed' : 'You Spread the Scam'}
                 </span>
                 <span className="text-xs text-zinc-400">{formatDate(tx.timestamp)}</span>
               </div>
@@ -110,7 +110,7 @@ export function TransactionHistory() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-zinc-400">Amount:</span>
-                  <span className="text-highlight">{tx.amount} SLQ</span>
+                  <span className="text-highlight">{tx.amount} Pieces of Garbage</span>
                 </div>
               </div>
               
@@ -121,7 +121,7 @@ export function TransactionHistory() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  View on Explorer
+                  Publicly Shame Yourself
                 </a>
               </div>
             </div>

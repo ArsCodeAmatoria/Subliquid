@@ -32,20 +32,20 @@ export function TokenBalance() {
 
   return (
     <div className="p-6 rounded-lg border border-zinc-800 bg-zinc-900/50">
-      <h2 className="text-2xl font-semibold mb-4">Token Balance</h2>
+      <h2 className="text-2xl font-semibold mb-4">Your Worthless Assets</h2>
       
       {!isConnected ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">Connect your wallet to view your balance</p>
+          <p className="text-zinc-400">Too scared to connect your wallet? Pathetic.</p>
         </div>
       ) : loading ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">Loading balance...</p>
+          <p className="text-zinc-400">Calculating your poor life choices...</p>
         </div>
       ) : (
         <>
-          <div className="text-4xl font-bold text-highlight">{balance} SLQ</div>
-          <p className="text-sm text-zinc-400 mt-2">Your Subliquid Token Balance</p>
+          <div className="text-4xl font-bold text-highlight">{balance} Shitcoins</div>
+          <p className="text-sm text-zinc-400 mt-2">Congratulations, you own literally nothing of value</p>
         </>
       )}
     </div>

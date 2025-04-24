@@ -14,16 +14,16 @@ export function WalletConnect() {
           className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg
             transition-colors duration-200 font-semibold disabled:opacity-50"
         >
-          {isConnecting ? 'Connecting...' : 'Connect Wallet'}
+          {isConnecting ? 'Preparing to Rob You...' : 'Connect and Get Scammed'}
         </button>
       ) : (
         <div className="text-center">
-          <p className="text-sm text-zinc-400">Connected Address</p>
+          <p className="text-sm text-zinc-400">We're Tracking This Sucker</p>
           <p className="font-mono text-highlight mb-4">{selectedAccount?.address}</p>
           
           {accounts.length > 1 && (
             <div className="mt-4">
-              <p className="text-sm text-zinc-400 mb-2">Switch Account</p>
+              <p className="text-sm text-zinc-400 mb-2">Choose Which Account to Ruin</p>
               <div className="flex flex-col gap-2 max-h-40 overflow-y-auto">
                 {accounts.map((account) => (
                   <button
@@ -46,7 +46,7 @@ export function WalletConnect() {
             href="/dashboard" 
             className="mt-6 inline-block px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors"
           >
-            Go to Dashboard
+            Enter the Hellscape
           </a>
         </div>
       )}

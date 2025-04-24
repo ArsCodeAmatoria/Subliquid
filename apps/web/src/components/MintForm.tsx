@@ -37,18 +37,18 @@ export function MintForm() {
 
   return (
     <div className="p-6 rounded-lg border border-zinc-800 bg-zinc-900/50">
-      <h2 className="text-2xl font-semibold mb-4">Mint Tokens</h2>
+      <h2 className="text-2xl font-semibold mb-4">Print Worthless Tokens</h2>
       
       {!isConnected ? (
         <div className="text-center py-4">
-          <p className="text-zinc-400">Connect your wallet to mint tokens</p>
+          <p className="text-zinc-400">Connect your stupid wallet first, genius</p>
         </div>
       ) : (
         <>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="amount" className="block text-sm font-medium mb-2">
-                Amount
+                How Much You Want To Lose
               </label>
               <input
                 type="number"
@@ -57,7 +57,7 @@ export function MintForm() {
                 onChange={(e) => setAmount(e.target.value)}
                 className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg
                   focus:outline-none focus:ring-2 focus:ring-primary text-white"
-                placeholder="Enter amount to mint"
+                placeholder="Bigger number = bigger regret"
                 disabled={isSubmitting}
               />
             </div>
@@ -67,19 +67,19 @@ export function MintForm() {
               className="w-full px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg
                 transition-colors duration-200 font-semibold disabled:opacity-50"
             >
-              {isSubmitting ? 'Processing...' : 'Mint Tokens'}
+              {isSubmitting ? 'Robbing You...' : 'Mint This Garbage'}
             </button>
           </form>
           
           {mintStatus === 'success' && (
             <div className="mt-4 p-3 bg-secondary/20 border border-secondary rounded-lg text-white">
-              Tokens minted successfully!
+              Congratulations idiot, you now own more worthless tokens!
             </div>
           )}
           
           {mintStatus === 'error' && (
             <div className="mt-4 p-3 bg-red-500/20 border border-red-500 rounded-lg text-white">
-              Failed to mint tokens. Please try again.
+              Failed to mint. Even our scam has standards.
             </div>
           )}
         </>
