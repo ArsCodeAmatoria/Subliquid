@@ -1,0 +1,24 @@
+[package]
+name = "subliquid_token"
+version = "0.1.0"
+authors = ["Subliquid Team"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.2.0", default-features = false }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "4.0.0-beta", default-features = false, features = ["psp22"] }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.6", default-features = false, features = ["derive"] }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+]
