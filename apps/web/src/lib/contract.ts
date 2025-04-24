@@ -1,7 +1,6 @@
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { ContractPromise } from '@polkadot/api-contract';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from './contract-abi';
-// Using any type for now to fix build issues
 import BN from 'bn.js';
 
 // Define the type for injected accounts
@@ -40,10 +39,9 @@ export async function initializeContract() {
 export async function getTokenBalance(address: string): Promise<string> {
   try {
     const contract = await initializeContract();
-    const api = await initializeApi();
     
-    // Call the PSP22 balanceOf function using the correct WeightV2 format
-    // @ts-ignore: Ignoring type issues for now to get the app working
+    // Using simplified call to avoid type issues
+    // @ts-ignore
     const result = await contract.query.balanceOf(
       address,
       { value: 0, gasLimit: -1 }, // Use default gas limit
@@ -69,10 +67,9 @@ export async function mintTokens(
 ): Promise<boolean> {
   try {
     const contract = await initializeContract();
-    const api = await initializeApi();
     
-    // Call the mint function from the contract
-    // @ts-ignore: Ignoring type issues for now to get the app working
+    // Using simplified call to avoid type issues
+    // @ts-ignore
     const tx = contract.tx.mint(
       { value: 0, gasLimit: -1 }, // Use default gas limit
       signer.address,
@@ -95,10 +92,9 @@ export async function transferTokens(
 ): Promise<boolean> {
   try {
     const contract = await initializeContract();
-    const api = await initializeApi();
     
-    // Call the transfer function from the contract
-    // @ts-ignore: Ignoring type issues for now to get the app working
+    // Using simplified call to avoid type issues
+    // @ts-ignore
     const tx = contract.tx.transfer(
       { value: 0, gasLimit: -1 }, // Use default gas limit
       recipient,

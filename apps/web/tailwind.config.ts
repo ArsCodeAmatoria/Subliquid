@@ -9,11 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0e0e0e",
-        primary: "#d97706",
-        secondary: "#22c55e",
-        text: "#e5e7eb",
-        highlight: "#fde68a",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        text: "var(--foreground)",
+        highlight: "var(--highlight)",
+        zinc: {
+          700: "var(--zinc-700)",
+          800: "var(--zinc-800)",
+          900: "var(--zinc-900)",
+        },
       },
     },
   },

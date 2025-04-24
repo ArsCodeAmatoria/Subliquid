@@ -2,20 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 5%;
-    --primary: 43 96% 42%;
-    --secondary: 142 70% 45%;
-    --text: 220 13% 91%;
-    --highlight: 47 97% 76%;
-  }
-}
-
 :root {
-  --foreground-rgb: 229, 231, 235;
-  --background-start-rgb: 14, 14, 14;
-  --background-end-rgb: 14, 14, 14;
+  --background: #0e0e0e;
+  --foreground: #e5e7eb;
+  --primary: #d97706;
+  --secondary: #22c55e;
+  --highlight: #fde68a;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
 }
 
 html {
@@ -23,13 +18,8 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 /* Custom scrollbar */
@@ -38,16 +28,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0e0e0e;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--zinc-700);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d97706;
+  background: var(--primary);
 }
 
 /* Gradient text utility */

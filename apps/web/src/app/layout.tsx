@@ -20,8 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-background text-text min-h-screen flex flex-col`}>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className={`${inter.className} bg-background text-foreground min-h-screen flex flex-col`}>
         <WalletProvider>
           <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-md border-b border-zinc-800">
             <nav className="container mx-auto px-4 py-4">
