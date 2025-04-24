@@ -15,7 +15,14 @@ interface InjectedAccountWithMeta {
 let api: ApiPromise | null = null;
 let contract: ContractPromise | null = null;
 
+// Check if we're in a browser environment
+const isBrowser = typeof window !== 'undefined';
+
 export async function initializeApi() {
+  if (!isBrowser) {
+    return null; // Return null when running on the server
+  }
+  
   if (api) return api;
   
   const wsEndpoint = process.env.NEXT_PUBLIC_WS_ENDPOINT || 'ws://127.0.0.1:9944';
@@ -25,6 +32,10 @@ export async function initializeApi() {
 }
 
 export async function initializeContract() {
+  if (!isBrowser) {
+    return null; // Return null when running on the server
+  }
+  
   if (!CONTRACT_ADDRESS) {
     throw new Error('Contract address not configured');
   }
@@ -32,13 +43,18 @@ export async function initializeContract() {
   if (contract) return contract;
   
   const api = await initializeApi();
+  if (!api) return null;
+  
   contract = new ContractPromise(api, CONTRACT_ABI, CONTRACT_ADDRESS);
   return contract;
 }
 
 export async function getTokenBalance(address: string): Promise<string> {
   try {
+    if (!isBrowser) return '0';
+    
     const contract = await initializeContract();
+    if (!contract) return '0';
     
     // Using simplified call to avoid type issues
     // @ts-ignore
@@ -66,7 +82,10 @@ export async function mintTokens(
   amount: string
 ): Promise<boolean> {
   try {
+    if (!isBrowser) return false;
+    
     const contract = await initializeContract();
+    if (!contract) return false;
     
     // Using simplified call to avoid type issues
     // @ts-ignore
@@ -91,7 +110,10 @@ export async function transferTokens(
   amount: string
 ): Promise<boolean> {
   try {
+    if (!isBrowser) return false;
+    
     const contract = await initializeContract();
+    if (!contract) return false;
     
     // Using simplified call to avoid type issues
     // @ts-ignore

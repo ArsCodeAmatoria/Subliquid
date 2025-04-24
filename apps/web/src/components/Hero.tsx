@@ -44,10 +44,10 @@ export function Hero() {
             </h1>
             
             <p className="text-xl sm:text-2xl font-medium text-zinc-300 max-w-3xl mx-auto mb-3">
-              The next generation liquidity protocol for the Polkadot ecosystem
+              The only token you'll regret more than your ex
             </p>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-12">
-              Seamless, secure, and decentralized token transfers with advanced DeFi functionality
+              You'll lose money, we'll get rich. A simple exchange you're somehow still considering
             </p>
             
             {/* Token metrics showcase */}
@@ -73,7 +73,7 @@ export function Hero() {
                   href="/dashboard" 
                   className="group relative px-8 py-4 bg-gradient-to-r from-primary to-highlight text-black font-bold rounded-xl hover:shadow-[0_0_25px_rgba(217,119,6,0.5)] transition-all duration-300 overflow-hidden"
                 >
-                  <span className="relative z-10">Connect Wallet</span>
+                  <span className="relative z-10">Give Us Your Money</span>
                   <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                 </a>
               ) : (
@@ -81,7 +81,7 @@ export function Hero() {
                   href="/dashboard" 
                   className="group relative px-8 py-4 bg-gradient-to-r from-primary to-highlight text-black font-bold rounded-xl hover:shadow-[0_0_25px_rgba(217,119,6,0.5)] transition-all duration-300 overflow-hidden"
                 >
-                  <span className="relative z-10">Open Dashboard</span>
+                  <span className="relative z-10">Back For More, Sucker?</span>
                   <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                 </a>
               )}
@@ -92,7 +92,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-white font-bold rounded-xl transition-colors duration-300"
               >
-                View on GitHub
+                Judge Our Shitty Code
               </a>
             </div>
           </div>
@@ -133,6 +133,95 @@ export function Hero() {
                   Experience blazing-fast transactions with minimal fees, optimized for the future of decentralized finance
                 </p>
               </div>
+            </div>
+          </div>
+          
+          {/* Testimonials section */}
+          <div id="testimonials" className="mt-32 max-w-6xl w-full scroll-mt-24">
+            <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-highlight bg-clip-text text-transparent">
+              OUR MESSAGE TO YOU
+            </h2>
+            
+            <div className="p-8 rounded-xl border border-primary/20 bg-zinc-900/50 mb-8">
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 rounded-full border-2 border-primary bg-zinc-900 flex items-center justify-center overflow-hidden mr-4">
+                  <span className="text-3xl">🖕</span>
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-2xl text-highlight">From Our CEO</h3>
+                </div>
+              </div>
+              <blockquote className="text-2xl font-bold text-white">
+                "If you don't like my Coin you can Suck my Dick"
+              </blockquote>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    💰
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Our Value Proposition</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "When you see this Coin you'll puke in your mouth a little"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    ❓
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Confused?</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "WTF is this? We don't know either"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    📉
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Investment Advice</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "Short this Shit. We probably would"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    🤷‍♂️
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Customer Support</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "Lost your tokens? Not our problem"
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-8 p-8 rounded-xl border border-primary/20 bg-zinc-900/50 text-center">
+              <p className="text-lg text-zinc-400 mb-4">Still here? You must be desperate...</p>
+              <a 
+                href="/dashboard" 
+                className="inline-block px-8 py-4 bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-white font-bold rounded-xl transition-colors duration-300"
+              >
+                Buy This Garbage
+              </a>
             </div>
           </div>
           

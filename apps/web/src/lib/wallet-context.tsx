@@ -1,8 +1,17 @@
 'use client';
 
 import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 import type { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
+
+// Dynamically import browser-only modules
+const importExtensionDapp = async () => {
+  if (typeof window === 'undefined') return { web3Accounts: null, web3Enable: null };
+  const module = await import('@polkadot/extension-dapp');
+  return { 
+    web3Accounts: module.web3Accounts, 
+    web3Enable: module.web3Enable 
+  };
+};
 
 interface WalletContextType {
   accounts: InjectedAccountWithMeta[];
@@ -32,6 +41,15 @@ export function WalletProvider({ children }: { children: ReactNode }) {
   const connectWallet = async () => {
     try {
       setIsConnecting(true);
+      
+      // Dynamically import the extension modules
+      const { web3Enable, web3Accounts } = await importExtensionDapp();
+      
+      if (!web3Enable || !web3Accounts) {
+        console.error('Not in browser environment');
+        return;
+      }
+      
       const extensions = await web3Enable('Subliquid');
       
       if (extensions.length === 0) {

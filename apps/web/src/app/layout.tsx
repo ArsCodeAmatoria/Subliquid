@@ -1,3 +1,5 @@
+'use client';
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -6,7 +8,8 @@ import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+// Metadata needs to be in a separate file or component when using 'use client'
+const metadata = {
   title: "Subliquid | Next-Gen DeFi Token on Polkadot",
   description: "Experience the future of decentralized finance with Subliquid, the next generation PSP22 token built on Polkadot with advanced liquidity features.",
   icons: {
@@ -22,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-background text-foreground min-h-screen flex flex-col`}>
         <WalletProvider>
@@ -42,6 +48,12 @@ export default function RootLayout({
                     className="hidden md:block text-zinc-400 hover:text-white transition-colors"
                   >
                     Features
+                  </a>
+                  <a 
+                    href="/#testimonials" 
+                    className="hidden md:block text-zinc-400 hover:text-white transition-colors"
+                  >
+                    Our Message
                   </a>
                   <a 
                     href="/#roadmap" 

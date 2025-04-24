@@ -10,6 +10,9 @@ export function TokenBalance() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // Only run on the client side
+    if (typeof window === 'undefined') return;
+    
     async function fetchBalance() {
       if (isConnected && selectedAccount) {
         try {

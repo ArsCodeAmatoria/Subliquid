@@ -11,7 +11,7 @@ export function Footer() {
               <h2 className="text-xl font-bold text-white">Subliquid</h2>
             </div>
             <p className="text-sm text-zinc-400 mb-4">
-              The next generation liquidity protocol for the Polkadot ecosystem. Built with ink! smart contracts and modern web technologies.
+              The token that makes your wallet lighter and your regrets heavier. We're rich, you're not. Deal with it.
             </p>
             <div className="flex gap-4">
               <a 
@@ -20,7 +20,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">𝕏</span>
+                <span className="text-zinc-400">🖕</span>
               </a>
               <a 
                 href="https://t.me" 
@@ -28,7 +28,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">✈️</span>
+                <span className="text-zinc-400">💩</span>
               </a>
               <a 
                 href="https://discord.com" 
@@ -36,31 +36,31 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">📱</span>
+                <span className="text-zinc-400">🤡</span>
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Useless Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/#features" className="text-zinc-400 hover:text-primary transition-colors">Features</a>
+                <a href="/#features" className="text-zinc-400 hover:text-primary transition-colors">Shit We Made Up</a>
               </li>
               <li>
-                <a href="/#roadmap" className="text-zinc-400 hover:text-primary transition-colors">Roadmap</a>
+                <a href="/#testimonials" className="text-zinc-400 hover:text-primary transition-colors">Our Message</a>
               </li>
               <li>
-                <a href="/#ecosystem" className="text-zinc-400 hover:text-primary transition-colors">Ecosystem</a>
+                <a href="/#roadmap" className="text-zinc-400 hover:text-primary transition-colors">Empty Promises</a>
               </li>
               <li>
-                <a href="/dashboard" className="text-zinc-400 hover:text-primary transition-colors">App</a>
+                <a href="/dashboard" className="text-zinc-400 hover:text-primary transition-colors">Scam Portal</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Shit You Won't Read</h3>
             <ul className="space-y-2">
               <li>
                 <a 
@@ -69,7 +69,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-zinc-400 hover:text-primary transition-colors"
                 >
-                  GitHub
+                  Our Garbage Code
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-zinc-400 hover:text-primary transition-colors"
                 >
-                  ink! Documentation
+                  Nerd Stuff
                 </a>
               </li>
               <li>
@@ -89,23 +89,23 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-zinc-400 hover:text-primary transition-colors"
                 >
-                  Polkadot.js
+                  More Boring Crap
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Newsletter</h3>
-            <p className="text-sm text-zinc-400 mb-4">Stay updated with the latest news and updates.</p>
+            <h3 className="text-lg font-bold mb-4 text-white">Spam Signup</h3>
+            <p className="text-sm text-zinc-400 mb-4">Enter your email. We'll sell it to scammers.</p>
             <div className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder="Your precious email" 
                 className="bg-zinc-800 border border-zinc-700 rounded-l-lg px-4 py-2 text-white w-full focus:outline-none focus:border-primary"
               />
               <button className="bg-primary hover:bg-primary/90 text-black font-bold rounded-r-lg px-4">
-                Join
+                Sucker
               </button>
             </div>
           </div>
@@ -113,12 +113,12 @@ export function Footer() {
         
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} Subliquid. All rights reserved.
+            &copy; {new Date().getFullYear()} Subliquid. No rights given. We own your soul now.
           </div>
           
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-zinc-500 hover:text-zinc-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="text-zinc-500 hover:text-zinc-400 transition-colors">Terms of Service</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-400 transition-colors">Data Theft Policy</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-400 transition-colors">Terms of Servitude</a>
           </div>
         </div>
       </div>
