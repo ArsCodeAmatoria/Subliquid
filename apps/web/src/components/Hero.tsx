@@ -17,7 +17,13 @@ import {
   Calendar,
   Skull,
   Timer,
-  Hourglass
+  Hourglass,
+  Bomb,
+  Trash,
+  BellOff,
+  Brain,
+  PiggyBank,
+  Footprints
 } from "lucide-react";
 
 export function Hero() {
@@ -227,6 +233,62 @@ export function Hero() {
                 </div>
                 <p className="text-xl text-zinc-300">
                   "Lost your tokens? Not our problem"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    <Bomb size={24} className="text-primary" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Tokenomics</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "It's like a time bomb for your wallet"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    <PiggyBank size={24} className="text-primary" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Financial Expert</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "I'd rather invest in my nephew's lemonade stand"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    <Brain size={24} className="text-primary" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Investor Testimonial</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "I bought at the top. Now I live in a cardboard box"
+                </p>
+              </div>
+              
+              <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
+                    <Footprints size={24} className="text-primary" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-bold text-xl text-highlight">Exit Strategy</h3>
+                  </div>
+                </div>
+                <p className="text-xl text-zinc-300">
+                  "Ours is well-planned. Yours doesn't exist"
                 </p>
               </div>
             </div>
