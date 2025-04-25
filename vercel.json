@@ -5,6 +5,5 @@
   "buildCommand": "cd apps/web && npm install && npm run build",
   "outputDirectory": "apps/web/.next/standalone",
   "framework": "nextjs",
-  "devCommand": "cd apps/web && npm run dev",
-  "rootDirectory": "apps/web"
+  "devCommand": "cd apps/web && npm run dev"
 } 
