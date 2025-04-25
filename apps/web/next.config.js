@@ -2,7 +2,23 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // Configure standalone output to minimize function size
   output: 'standalone',
+  // Experimental features for optimization
+  experimental: {
+    // Disable optimizeCss as it's causing issues
+    optimizeCss: false,
+    // Enable compression for smaller output
+    outputFileTracingExcludes: {
+      '*': [
+        'node_modules/@swc/core-linux-x64-gnu',
+        'node_modules/@swc/core-linux-x64-musl',
+        'node_modules/@esbuild/linux-x64',
+        '.git/**',
+      ],
+    },
+  },
+  // Handle dependencies issues
   webpack: (config, { isServer }) => {
     // Handle browser-only modules when running in Node.js
     if (isServer) {
@@ -28,10 +44,6 @@ const nextConfig = {
     }
     
     return config;
-  },
-  experimental: {
-    // Disable optimizeCss as it's causing issues
-    optimizeCss: false,
   },
 };
 

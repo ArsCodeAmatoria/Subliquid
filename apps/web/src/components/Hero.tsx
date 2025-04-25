@@ -2,6 +2,23 @@
 
 import { useWallet } from "@/lib/wallet-context";
 import Image from "next/image";
+import { 
+  Droplets, 
+  ShieldCheck, 
+  Zap, 
+  ThumbsDown, 
+  DollarSign, 
+  HelpCircle, 
+  TrendingDown, 
+  HeartCrack,
+  BadgeAlert,
+  CheckCircle,
+  Circle,
+  Calendar,
+  Skull,
+  Timer,
+  Hourglass
+} from "lucide-react";
 
 export function Hero() {
   const { isConnected } = useWallet();
@@ -100,37 +117,37 @@ export function Hero() {
           {/* Features section - enhanced with icons and better spacing */}
           <div id="features" className="mt-24 max-w-6xl w-full scroll-mt-24">
             <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-highlight bg-clip-text text-transparent">
-              REVOLUTIONIZING DEFI ON POLKADOT
+              PRETENDING TO REVOLUTIONIZE DEFI ON POLKADOT
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50 hover:border-primary hover:shadow-[0_0_15px_rgba(217,119,6,0.15)] transition-all duration-300">
                 <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                  <span className="text-4xl">💧</span>
+                  <Droplets size={40} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Seamless Liquidity</h3>
+                <h3 className="text-2xl font-bold mb-3">Leaking Liquidity</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                  PSP22-compliant token with advanced liquidity pools and yield farming opportunities, all powered by ink! smart contracts
+                  PSP22-compliant token with completely untested liquidity pools. We copied the code from GitHub and barely understand how it works.
                 </p>
               </div>
               
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50 hover:border-primary hover:shadow-[0_0_15px_rgba(217,119,6,0.15)] transition-all duration-300">
                 <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                  <span className="text-4xl">🔒</span>
+                  <ShieldCheck size={40} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Enhanced Security</h3>
+                <h3 className="text-2xl font-bold mb-3">Imaginary Security</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                  Built on Polkadot's secure infrastructure with formal verification and comprehensive security audits
+                  Built on Polkadot, but we skipped all the security audits because they were too expensive. Our dev's cousin said it looks fine.
                 </p>
               </div>
               
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50 hover:border-primary hover:shadow-[0_0_15px_rgba(217,119,6,0.15)] transition-all duration-300">
                 <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                  <span className="text-4xl">⚡</span>
+                  <Zap size={40} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Lightning Fast</h3>
+                <h3 className="text-2xl font-bold mb-3">Lightning Fast Crashes</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                  Experience blazing-fast transactions with minimal fees, optimized for the future of decentralized finance
+                  Experience how quickly your investment can go to zero. Our servers run on a Raspberry Pi in our CEO's basement.
                 </p>
               </div>
             </div>
@@ -145,7 +162,7 @@ export function Hero() {
             <div className="p-8 rounded-xl border border-primary/20 bg-zinc-900/50 mb-8">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 rounded-full border-2 border-primary bg-zinc-900 flex items-center justify-center overflow-hidden mr-4">
-                  <span className="text-3xl">🖕</span>
+                  <ThumbsDown size={32} className="text-primary" />
                 </div>
                 <div>
                   <h3 className="font-extrabold text-2xl text-highlight">From Our CEO</h3>
@@ -160,7 +177,7 @@ export function Hero() {
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
-                    💰
+                    <DollarSign size={24} className="text-primary" />
                   </div>
                   <div className="ml-4">
                     <h3 className="font-bold text-xl text-highlight">Our Value Proposition</h3>
@@ -174,7 +191,7 @@ export function Hero() {
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
-                    ❓
+                    <HelpCircle size={24} className="text-primary" />
                   </div>
                   <div className="ml-4">
                     <h3 className="font-bold text-xl text-highlight">Confused?</h3>
@@ -188,7 +205,7 @@ export function Hero() {
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
-                    📉
+                    <TrendingDown size={24} className="text-primary" />
                   </div>
                   <div className="ml-4">
                     <h3 className="font-bold text-xl text-highlight">Investment Advice</h3>
@@ -202,7 +219,7 @@ export function Hero() {
               <div className="p-8 rounded-xl border border-zinc-800 bg-zinc-900/50">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-xl">
-                    🤷‍♂️
+                    <HeartCrack size={24} className="text-primary" />
                   </div>
                   <div className="ml-4">
                     <h3 className="font-bold text-xl text-highlight">Customer Support</h3>
@@ -228,7 +245,7 @@ export function Hero() {
           {/* Roadmap section */}
           <div id="roadmap" className="mt-32 max-w-6xl w-full scroll-mt-24">
             <h2 className="text-3xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-highlight bg-clip-text text-transparent">
-              ROADMAP
+              ROADMAP TO NOWHERE
             </h2>
             
             <div className="relative">
@@ -240,23 +257,23 @@ export function Hero() {
                 <div className="relative">
                   <div className="flex items-center justify-center mb-8">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-highlight flex items-center justify-center text-black font-bold z-10">
-                      Q2
+                      <Calendar size={24} className="text-black" />
                     </div>
                   </div>
                   <div className="bg-zinc-900/70 backdrop-blur-sm rounded-xl p-8 border border-zinc-800 ml-4 mr-4">
-                    <h3 className="text-2xl font-bold mb-4 text-highlight">Initial Development</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-highlight">Initial Cash Grab</h3>
                     <ul className="space-y-2 text-zinc-300">
                       <li className="flex items-start">
-                        <span className="text-primary mr-2">✓</span>
-                        <span>PSP22 token implementation with ink! smart contracts</span>
+                        <CheckCircle className="text-primary mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>PSP22 token implementation we copy-pasted from GitHub</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary mr-2">✓</span>
-                        <span>Web interface development with Next.js & Polkadot.js integration</span>
+                        <CheckCircle className="text-primary mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Web interface our intern built during lunch breaks</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary mr-2">✓</span>
-                        <span>Wallet connectivity and transaction features</span>
+                        <CheckCircle className="text-primary mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Wallet connectivity that works 60% of the time, every time</span>
                       </li>
                     </ul>
                   </div>
@@ -266,23 +283,23 @@ export function Hero() {
                 <div className="relative">
                   <div className="flex items-center justify-center mb-8">
                     <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-white font-bold z-10">
-                      Q3
+                      <Timer size={24} className="text-white" />
                     </div>
                   </div>
                   <div className="bg-zinc-900/70 backdrop-blur-sm rounded-xl p-8 border border-zinc-800 ml-4 mr-4">
-                    <h3 className="text-2xl font-bold mb-4 text-zinc-200">Expansion & Staking</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-zinc-200">Rug Pull Preparation</h3>
                     <ul className="space-y-2 text-zinc-400">
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>Staking mechanisms and reward distribution</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Adding backdoors to the staking mechanism</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>Deployment on Polkadot parachains</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Deployment on parachains no one has heard of</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>Initial liquidity pool partnerships</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Partnering with liquidity pools run by our cousins</span>
                       </li>
                     </ul>
                   </div>
@@ -292,23 +309,23 @@ export function Hero() {
                 <div className="relative">
                   <div className="flex items-center justify-center mb-8">
                     <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center text-white font-bold z-10">
-                      Q4
+                      <Skull size={24} className="text-white" />
                     </div>
                   </div>
                   <div className="bg-zinc-900/70 backdrop-blur-sm rounded-xl p-8 border border-zinc-800 ml-4 mr-4">
-                    <h3 className="text-2xl font-bold mb-4 text-zinc-200">Governance & Ecosystem</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-zinc-200">Exit Strategy</h3>
                     <ul className="space-y-2 text-zinc-400">
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>DAO governance implementation</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Fake DAO votes to approve our mega bonuses</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>Cross-chain functionality</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Move funds to untraceable offshore accounts</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-zinc-600 mr-2">○</span>
-                        <span>Developer grants program launch</span>
+                        <Circle className="text-zinc-600 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span>Rebrand and start over with a new coin in Q1</span>
                       </li>
                     </ul>
                   </div>

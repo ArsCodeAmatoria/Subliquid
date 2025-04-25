@@ -1,6 +1,8 @@
 {
   "framework": "nextjs",
+  "buildCommand": "npm run build",
   "installCommand": "npm install",
+  "outputDirectory": ".next/standalone",
   "headers": [
     {
       "source": "/(.*)",
@@ -18,6 +20,12 @@
           "value": "1; mode=block"
         }
       ]
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
   ]
 } 

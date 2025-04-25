@@ -1,3 +1,5 @@
+import { ThumbsDown, Trash2, Laugh } from "lucide-react";
+
 export function Footer() {
   return (
     <footer className="border-t border-zinc-800 mt-auto py-12 bg-zinc-900/70 backdrop-blur-sm">
@@ -20,7 +22,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">🖕</span>
+                <ThumbsDown size={18} className="text-zinc-400" />
               </a>
               <a 
                 href="https://t.me" 
@@ -28,7 +30,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">💩</span>
+                <Trash2 size={18} className="text-zinc-400" />
               </a>
               <a 
                 href="https://discord.com" 
@@ -36,7 +38,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
               >
-                <span className="text-zinc-400">🤡</span>
+                <Laugh size={18} className="text-zinc-400" />
               </a>
             </div>
           </div>
